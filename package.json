@@ -1,0 +1,26 @@
+{
+  "name": "badgfserver",
+  "version": "1.0.0",
+  "description": "this is our final project for class, mobile app.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmchenry93/badGirlfriendsServer.git"
+  },
+  "author": "Team Elixir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmchenry93/badGirlfriendsServer/issues"
+  },
+  "homepage": "https://github.com/tmchenry93/badGirlfriendsServer#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "react": "^15.6.1",
+    "react-router": "^4.1.2"
+  }
+}
