@@ -39,7 +39,7 @@ var db = require("../models/");
 		}).then(function(dbScore) {
 			// eventually put this is ascending order
 			res.json(dbScore);
-			console.log(dbScore);
+			console.log(dbScore.JSON());
 		});
 	});
 
