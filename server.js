@@ -4,16 +4,14 @@ var React = require("react");
 var Router = require("react-router");
 var bodyParser = require("body-parser");
 
-var PORT = 3000;
-
 // Create Instance of Express
 var app = express();
 
 // Require girlfriend Schema
-var Score = require("./models/Score");
+var db = require("./models/Score");
 
 // Require API routes
-var db = require("./routes/models-routes.js");
+var Scores = require("./routes/model-routes.js");
 
 // Sets an initial port. We'll use this later in our listener
 var PORT = process.env.PORT || 3000;
@@ -32,7 +30,7 @@ require("./routes/model-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: false }).then(function() {
-  // app.listen(PORT, function() {
+  app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-  // });
+  });
 });
