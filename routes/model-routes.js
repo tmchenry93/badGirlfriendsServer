@@ -20,17 +20,17 @@ module.exports = function(app) {
 	});
 
 	// this is a POST request to retrieve the information on the girlfriend chosen 
-	app.post("/Matches", function(req, res) {
-		db.Score.update ({
+	// app.post("/Matches", function(req, res) {
+	// 	db.Score.update ({
 
-		})
-	});
+	// 	})
+	// });
 
 	// this is a GET request to push all the scores within the database to the server and onto the client browser
 	app.get("/Scores", function(req, res){
 		db.Score.findAll({
 
-		});.then(function.(dbScore) {
+		}).then(function.(dbScore) {
 			// eventually put this is ascending order
 			res.json(dbScore);
 		});
