@@ -1,11 +1,15 @@
 // Import the model Score to use its database functions
-var db = require("../models");
+var express = require("express");
 
-module.exports = function(app) {
+var router = express.Router();
+
+var db = require("../models/");
+
+// module.exports = function(app) {
 	
 	// this is the Post request to the client browser to grab login information
 	// create a player with the data available to us in req.body
-	app.post("/", function(req, res) {
+	router.post("/", function(req, res) {
 		// console.log(req.body);
 		// this is creating a new item within the sequelize database
 		db.Score.create ({
@@ -36,4 +40,5 @@ module.exports = function(app) {
 	// 	});
 	// });
 
-}
+// }
+module.exports = router;

@@ -23,6 +23,6 @@
     "mysql": "^2.14.1",
     "react": "^15.6.1",
     "react-router": "^4.1.2",
-    "sequelize": "^4.4.2"
+    "sequelize": "^3.27.0"
   }
 }

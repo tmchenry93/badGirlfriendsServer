@@ -2,6 +2,7 @@ module.exports = function(sequelize, DataTypes) {
 	var Score = sequelize.define("Score", {
 		id: {
 			type: DataTypes.INTEGER,
+			primaryKey: true,
 			allowNull: false,
 			validate: {
 				len: [1]
@@ -29,9 +30,9 @@ module.exports = function(sequelize, DataTypes) {
 			}
 		},
 		date: {
-			type: DataTypes.Date,
+			type: DataTypes.DATE,
 			defaultValue: DataTypes.NOW
 		}
 	});
 	return Score;
-}
+};
