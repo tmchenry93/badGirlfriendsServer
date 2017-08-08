@@ -26,6 +26,8 @@ var db = require("../models/");
 	// this is a POST request to retrieve the information on the girlfriend chosen 
 	// app.post("/Matches", function(req, res) {
 	// 	db.Score.update ({
+	// 		girlfriend: 
+	// 		}
 
 	// 	})
 	// });
@@ -37,6 +39,7 @@ var db = require("../models/");
 		}).then(function(dbScore) {
 			// eventually put this is ascending order
 			res.json(dbScore);
+			console.log(dbScore);
 		});
 	});
 
