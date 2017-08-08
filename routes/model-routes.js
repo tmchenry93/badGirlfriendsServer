@@ -31,14 +31,14 @@ var db = require("../models/");
 	// });
 
 	// this is a GET request to push all the scores within the database to the server and onto the client browser
-	// app.get("/Scores", function(req, res){
-	// 	db.Score.findAll({
+	router.get("/Scores", function(req, res){
+		db.Score.findAll({
 
-	// 	}).then(function(dbScore) {
-	// 		// eventually put this is ascending order
-	// 		res.json(dbScore);
-	// 	});
-	// });
+		}).then(function(dbScore) {
+			// eventually put this is ascending order
+			res.json(dbScore);
+		});
+	});
 
 // }
 module.exports = router;
