@@ -14,7 +14,9 @@ var db = require("../models/");
 		// this is creating a new item within the sequelize database
 		db.Score.create ({
 			playername: res.json(data),
-		});	
+		}).then(function(response) {
+			return res.json(data);
+		})
 	});
 
 	// this is a GET request to push all the scores within the database to the server and onto the client browser
