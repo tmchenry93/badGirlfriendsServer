@@ -9,28 +9,13 @@ var db = require("../models/");
 	
 	// this is the Post request to the client browser to grab login information
 	// create a player with the data available to us in req.body
-	router.post("/", function(req, res) {
+	router.post("/Scores", function(req, res, username, score) {
 		// console.log(req.body);
 		// this is creating a new item within the sequelize database
 		db.Score.create ({
-			playername: req.body.user.givenName
+			playername: username,
 		});	
-
-		if (!req.body.user.givenName) {
-			db.Score.create ({
-				playername: req.body.guestName // input value of the guest form sign in
-			});
-		}
 	});
-
-	// this is a POST request to retrieve the information on the girlfriend chosen 
-	// app.post("/Matches", function(req, res) {
-	// 	db.Score.update ({
-	// 		girlfriend: 
-	// 		}
-
-	// 	})
-	// });
 
 	// this is a GET request to push all the scores within the database to the server and onto the client browser
 	router.get("/Scores", function(req, res){
@@ -39,9 +24,7 @@ var db = require("../models/");
 		}).then(function(dbScore) {
 			// eventually put this is ascending order
 			res.json(dbScore);
-			console.log(json(dbScore));
 		});
 	});
 
-// }
 module.exports = router;
