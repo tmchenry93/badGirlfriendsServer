@@ -22,6 +22,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // app.use(express.static("./public"));
 var routes = require("./routes/model-routes.js");
 
+app.use("/", routes);
 app.use("/Scores", routes);
 // Require API routes
 // var Scores = require("./routes/model-routes.js")(app);
