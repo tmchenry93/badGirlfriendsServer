@@ -13,7 +13,7 @@ var db = require("../models/");
 		console.log(req.body);
 		// this is creating a new item within the sequelize database
 		db.Score.create ({
-			playername: data,
+			playername: data
 		});	
 	});
 
