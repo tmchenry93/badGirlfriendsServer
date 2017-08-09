@@ -9,11 +9,11 @@ var db = require("../models/");
 	
 	// this is the Post request to the client browser to grab login information
 	// create a player with the data available to us in req.body
-	router.post("/Scores", function(req, res, username, score) {
+	router.post("/Scores", function(req, res) {
 		// console.log(req.body);
 		// this is creating a new item within the sequelize database
 		db.Score.create ({
-			playername: username,
+			playername: req.body.username,
 		});	
 	});
 
