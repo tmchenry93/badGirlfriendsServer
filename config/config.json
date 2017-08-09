@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "localhost",
-    "database": "Score",
-    "host": "127.0.0.1",
+    "username": "lzdjfiwkz40offjb",
+    "password": "f9yd8lxd11bmpsqx",
+    "database": "oszoomjl9m0arpu7",
+    "host": "h40lg7qyub2umdvb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "port": "3306"
   },
